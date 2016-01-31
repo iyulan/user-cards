@@ -1,0 +1,21 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password:
+  socket: /tmp/mysql.sock
+
+development:
+  <<: *default
+  database: user-card-dev
+
+test:
+  <<: *default
+  database: user-card-test
+
+production:
+  <<: *default
+  database: user-card-prod
+  username: user-card
+  password: <%= ENV['USER-CARD_DATABASE_PASSWORD'] %>
