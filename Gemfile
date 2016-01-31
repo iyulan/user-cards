@@ -11,6 +11,7 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'puma', require: false
+gem 'slim-rails'
 
 group :production do
   gem 'utf8-cleaner'
