@@ -16,6 +16,10 @@ group :production do
   gem 'utf8-cleaner'
 end
 
+group :development do
+  gem 'web-console', '~> 2.0'
+end
+
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
@@ -32,5 +36,4 @@ group :test, :development do
   gem 'shoulda-matchers'
   gem 'rubocop', require: false
   gem 'spring'
-  gem 'web-console', '~> 2.0'
 end
