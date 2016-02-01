@@ -18,6 +18,9 @@ gem 'jquery-fileupload-rails', '~> 0.4.6'
 
 group :production do
   gem 'utf8-cleaner'
+  # heroku
+  gem 'pg'
+  gem 'rails_12factor'
 end
 
 group :development do
