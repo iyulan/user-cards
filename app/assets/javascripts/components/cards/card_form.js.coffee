@@ -1,7 +1,7 @@
 @CardForm = React.createClass
   getInitialState: ->
     step: 1
-    data: {}
+    data: { last_name: '', first_name: '', gender: '0', photo_id: '' }
   handleStep: (step, data) ->
     @setState step: step, data: data
   render: ->

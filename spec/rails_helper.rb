@@ -7,6 +7,8 @@ require 'spec_helper'
 require 'rspec/rails'
 require 'factory_girl_rails'
 require 'shoulda/matchers'
+require 'capybara/rspec'
+require 'capybara/poltergeist'
 require 'database_cleaner'
 
 Shoulda::Matchers.configure do |config|
@@ -51,4 +53,9 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+  Capybara.register_driver :poltergeist do |app|
+    Capybara::Poltergeist::Driver.new(app, js_errors: false)
+  end
+
+  Capybara.javascript_driver = :poltergeist
 end
