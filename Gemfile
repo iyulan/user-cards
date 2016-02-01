@@ -12,6 +12,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'puma', require: false
 gem 'slim-rails'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'jquery-fileupload-rails', '~> 0.4.6'
 
 group :production do
   gem 'utf8-cleaner'

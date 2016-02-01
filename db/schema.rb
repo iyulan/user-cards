@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160131115602) do
+ActiveRecord::Schema.define(version: 20160131214958) do
 
   create_table "cards", force: :cascade do |t|
     t.string   "first_name", limit: 255, default: "", null: false
@@ -19,6 +19,13 @@ ActiveRecord::Schema.define(version: 20160131115602) do
     t.integer  "gender",     limit: 2,   default: 0,  null: false
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.integer  "photo_id",   limit: 4
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.string   "image",      limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
 end

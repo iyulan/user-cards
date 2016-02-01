@@ -17,4 +17,5 @@
 //= require react
 //= require react_ujs
 //= require components
+//= require jquery-fileupload/basic
 //= require_tree .

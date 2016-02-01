@@ -1,2 +1,5 @@
 .row
-  = 'asd'
+  - @cards.each do |card|
+    = card.first_name
+    - if card.photo
+      img src= "#{card.photo.image.url}"
