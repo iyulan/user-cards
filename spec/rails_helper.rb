@@ -19,6 +19,7 @@ end
 ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
+  config.include FactoryGirl::Syntax::Methods
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
   config.use_transactional_fixtures = false
@@ -41,6 +42,7 @@ RSpec.configure do |config|
 
   config.after(:each) do
     DatabaseCleaner.clean
+    FileUtils.rm_rf(Dir["#{Rails.root}/spec/support/uploads"])
   end
 
   config.infer_spec_type_from_file_location!
