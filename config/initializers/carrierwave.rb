@@ -4,9 +4,6 @@ if Rails.env.test?
     config.enable_processing = false
   end
 
-  # make sure our uploader is auto-loaded
-  ImageUploader
-
   # use different dirs when testing
   CarrierWave::Uploader::Base.descendants.each do |klass|
     next if klass.anonymous?

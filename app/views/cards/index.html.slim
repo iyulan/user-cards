@@ -1,5 +1,9 @@
-.row
-  - @cards.each do |card|
-    = card.first_name
-    - if card.photo
-      img src= "#{card.photo.image.url}"
+- @cards.each_slice(3) do |card_group|
+  .row
+    - card_group.each do |card|
+      .col-md-4
+        - if card.photo
+          img src= "#{card.photo.image.url}"
+        h4
+          = card.full_name
+

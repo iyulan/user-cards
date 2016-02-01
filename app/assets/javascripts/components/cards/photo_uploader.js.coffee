@@ -44,35 +44,39 @@
     @state.photoId
   render: ->
     React.DOM.div
-      className: 'upload-form'
-      React.DOM.h2
-        className: 'title'
-        'Step 2'
+      className: 'row'
       React.DOM.div
-        id: 'dragandrophandler'
-        'Drag & drop here'
-      React.DOM.img
-        src: @state.imageSrc
-      React.DOM.form
-        className: 'form'
-        onSubmit: @handleSubmit
+        className: 'col-md-4 col-md-offset-4'
         React.DOM.div
-          className: 'fileupload'
-          React.DOM.input
-            className: 'hidden'
-            id: 'input-fileupload'
-            type: 'file'
-            name: 'photo[image]'
-          React.DOM.input
-            type: 'hidden'
-            name: 'prev_image_id'
-            value: @state.photoId
-        React.DOM.a
-          className: 'btn btn-primary'
-          onClick: @handlePrev
-          'Back'
-        React.DOM.button
-          type: 'submit'
-          className: 'btn btn-primary'
-          disabled: !@valid()
-          'Save'
+          className: 'upload-form'
+          React.DOM.h2
+            className: 'title'
+            'Step 2'
+          React.DOM.div
+            id: 'dragandrophandler'
+            'Drag & drop here'
+          React.DOM.img
+            src: @state.imageSrc
+          React.DOM.form
+            className: 'form'
+            onSubmit: @handleSubmit
+            React.DOM.div
+              className: 'fileupload'
+              React.DOM.input
+                className: 'hidden'
+                id: 'input-fileupload'
+                type: 'file'
+                name: 'photo[image]'
+              React.DOM.input
+                type: 'hidden'
+                name: 'prev_image_id'
+                value: @state.photoId
+            React.DOM.a
+              className: 'btn btn-primary'
+              onClick: @handlePrev
+              'Back'
+            React.DOM.button
+              type: 'submit'
+              className: 'btn btn-primary'
+              disabled: !@valid()
+              'Save'

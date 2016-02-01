@@ -16,7 +16,7 @@ describe Card do
 
   describe '.full_name' do
     it 'return full name' do
-      expect(card.full_name).to eq("#{card.first_name} #{card.last_name}")
+      expect(card.full_name).to eq("#{card.first_name} #{card.last_name} (gender: #{card.gender})")
     end
   end
 

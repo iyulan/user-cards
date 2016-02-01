@@ -7,5 +7,12 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
 body
-  .container
+  nav.navbar.navbar-default.navbar-fixed-top
+    .container
+      .navbar-header
+        = link_to 'Cards', root_path, class: 'navbar-brand'
+      #navbar
+        ul.nav.navbar-nav
+          li = link_to 'New', new_card_path
+  .container.main
     = yield

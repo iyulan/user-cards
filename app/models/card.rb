@@ -6,7 +6,7 @@ class Card < ActiveRecord::Base
   belongs_to :photo
 
   def full_name
-    "#{first_name} #{last_name}"
+    "#{first_name} #{last_name} (gender: #{gender})"
   end
 
   def as_json(options = {})

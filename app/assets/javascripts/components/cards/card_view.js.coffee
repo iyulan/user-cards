@@ -3,14 +3,12 @@
     React.DOM.div
       className: 'row'
       React.DOM.div
-        className: 'col-md-6'
-        React.DOM.h1
-          className: 'title'
-          @props.data.full_name
-        React.DOM.h3
-          "gender: #{ @props.data.gender }"
+        className: 'col-md-4 col-md-offset-4'
         React.DOM.img
           src: @props.data.image.url
+        React.DOM.h3
+          className: 'title'
+          @props.data.full_name
 
 
 

@@ -19,6 +19,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.main {
+  margin-top: 70px;
+}
 
 #dragandrophandler
 {
@@ -31,4 +34,8 @@
   padding: 10px 10px 10 10px;
   margin-bottom: 10px;
   font-size: 200%;
+}
+
+.btn-primary {
+  margin: 10 10 10 0;
 }

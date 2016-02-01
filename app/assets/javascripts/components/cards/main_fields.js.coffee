@@ -19,53 +19,57 @@
     if @state.gender == val then 'checked' else ''
   render: ->
     React.DOM.div
-      className: 'fields-form'
-      React.DOM.h2
-        className: 'title'
-        'Step 1'
-      React.DOM.form
-        className: 'form'
-        onSubmit: @handleSubmit
+      className: 'row'
+      React.DOM.div
+        className: 'col-md-4 col-md-offset-4'
         React.DOM.div
-          className: 'form-group'
-          React.DOM.input
-            type: 'text'
-            className: 'form-control'
-            placeholder: 'First name'
-            name: 'first_name'
-            value: @state.first_name
-            onChange: @handleChange
-        React.DOM.div
-          className: 'form-group'
-          React.DOM.input
-            type: 'text'
-            className: 'form-control'
-            placeholder: 'Last name'
-            name: 'last_name'
-            value: @state.last_name
-            onChange: @handleChange
-        React.DOM.div
-          className: 'form-group'
-          React.DOM.label
-            className: 'radio-inline'
-            React.DOM.input
-              type: 'radio'
-              name: 'gender'
-              value: '0'
-              onChange: @handleChange
-              checked: @checkedState('0')
-              'Male'
-          React.DOM.label
-            className: 'radio-inline'
-            React.DOM.input
-              type: 'radio'
-              name: 'gender'
-              value: '1'
-              onChange: @handleChange
-              checked: @checkedState('1')
-              'Female'
-        React.DOM.button
-          type: 'submit'
-          className: 'btn btn-primary'
-          disabled: !@valid()
-          'Next'
+          className: 'fields-form'
+          React.DOM.h2
+            className: 'title'
+            'Step 1'
+          React.DOM.form
+            className: 'form'
+            onSubmit: @handleSubmit
+            React.DOM.div
+              className: 'form-group'
+              React.DOM.input
+                type: 'text'
+                className: 'form-control'
+                placeholder: 'First name'
+                name: 'first_name'
+                value: @state.first_name
+                onChange: @handleChange
+            React.DOM.div
+              className: 'form-group'
+              React.DOM.input
+                type: 'text'
+                className: 'form-control'
+                placeholder: 'Last name'
+                name: 'last_name'
+                value: @state.last_name
+                onChange: @handleChange
+            React.DOM.div
+              className: 'form-group'
+              React.DOM.label
+                className: 'radio-inline'
+                React.DOM.input
+                  type: 'radio'
+                  name: 'gender'
+                  value: '0'
+                  onChange: @handleChange
+                  checked: @checkedState('0')
+                  'Male'
+              React.DOM.label
+                className: 'radio-inline'
+                React.DOM.input
+                  type: 'radio'
+                  name: 'gender'
+                  value: '1'
+                  onChange: @handleChange
+                  checked: @checkedState('1')
+                  'Female'
+            React.DOM.button
+              type: 'submit'
+              className: 'btn btn-primary'
+              disabled: !@valid()
+              'Next'
