@@ -17,5 +17,3 @@ rspec
 ```
 
 [Demo](https://murmuring-plateau-83523.herokuapp.com/)
-
-
